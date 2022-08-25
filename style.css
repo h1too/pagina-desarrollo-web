@@ -1,0 +1,21 @@
+div > p {
+    color: black;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+ul {
+    justify-content: space-evenly;
+    display: flex;
+    list-style-type: none;
+}
+
+footer {
+    display: flex;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Tienda de autos</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Esta es mi primera pagina" />
+        <meta name="viewport" content="width = device-width,initial-scale=1.0" />
+        <meta name="report" content="index, follow" />
+        <link type="text/css" href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <script>
+            //alert("El Dani tiene la mea tula🥵👉👈")
+
+            function CambiaTamano(){
+            document.getElementById("kie").width=100
+            document.getElementById("kie").height=100
+            }
+
+            function MuestraDatos(){
+                var mensaje="los datos fueron enviados";
+                    mensaje = mensaje+
+                        //alert(document.getElementById("nom").value)
+                alert(mensaje);
+            }
+
+            function CambiaImagen(objeto){
+                objeto.src="JavaS.png";
+            }
+
+            function VolverImagen(objeto){
+                objeto.src="JavaS.png";
+            }
+        </script>
+
+        <header>
+            <nav>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Productos y servicios</li>
+                    <li>Quienes somos</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Tienda de autos</h1>
+
+        <img id="kie" src="./imagenes/maizena.jpg" width="200px" height="200px"
+            onclick="CambiaTamano(this)"
+            onmouseover="CambiaImagen(this)"
+            onmouseover="VolverImagen(this)">
+        
+            <br>
+
+        <form action="#" onsubmit="MuestraDatos(this)">
+
+            Nombre <input type="text" name="nom" id="nom" placeholder="ingrese su nombre">
+            Correo <input type="email" name="email" id="email" placeholder="ingrese su correo">
+            Region <select name="Region" id="Region">
+                <option value="0">--Seleccione un Pais--</option>
+                <option value="01">Araucania</option>
+                <option value="02">Region Metropolitana</option>
+                <option value="03">Aisen</option> 
+                </select><br>
+            <input type="submit" name="Enviar">
+        </from><br>
+
+       <footer>
+            <div>
+                <p>todos los derechos reservados</p>
+                <p>copyright 2022</p>
+            </div>
+        </footer>
+    </body>
+</html>
