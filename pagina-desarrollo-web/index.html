@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Autochile</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Esta es mi primera pagina" />
+        <meta name="viewport" content="width = device-width,initial-scale=1.0" />
+        <meta name="report" content="index, follow" />
+        <link type="text/css" href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <script>
+            //alert("El Dani tiene la mea tula🥵👉👈")
+
+            function CambiaTamano(){
+            document.getElementById("01").width=100
+            document.getElementById("01").height=100
+            }
+
+            function MuestraDatos(){
+                var mensaje="Los datos fueron enviados";
+                    mensaje = mensaje+
+                        //alert(document.getElementById("nom").value)
+                alert(mensaje);
+            }
+
+            function CambiaImagen(objeto){
+                objeto.src="JavaS.png";
+            }
+
+            function VolverImagen(objeto){
+                objeto.src="JavaS.png";
+            }
+        </script>
+
+        <header>
+            <nav>
+                <ul class="ul_nav">
+                    <li>Inicio</li>
+                    <li>Productos y servicios</li>
+                    <li>Quienes somos</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Tienda de vehiculos</h1>
+
+        <img id="01" src="./Imagenes/chileautos_WebVersion.png" width="500px" height="200px">
+
+        <form action="#" onsubmit="MuestraDatos(this)">
+
+            Nombre: <input type="text" name="nom" id="nom" placeholder="Ingrese su nombre">
+            Correo: <input type="email" name="email" id="email" placeholder="Ingrese su correo">
+            Region: <select name="Region" id="Region">
+                <option value="0">--Seleccione un Pais--</option>
+                <option value="01">Arica-Parinacota</option>
+                <option value="02">Tarapacá</option>
+                <option value="03">Antofagasta</option>
+                <option value="04">Atacama</option>
+                <option value="05">Coquimbo</option>
+                <option value="06">Valparaíso</option>
+                <option value="07">Metropolitana</option>
+                <option value="08">O'Higgins</option>
+                <option value="09">Maule</option>
+                <option value="10">Ñuble</option>
+                <option value="11">Bío Bío</option>
+                <option value="12">Araucanía</option>
+                <option value="13">Los Ríos</option>
+                <option value="14">Los Lagos</option>
+                <option value="15">Aysén</option>
+                <option value="16">Magallanes y Antártica Chilena</option>
+                </select><br>
+            <input type="submit" name="Enviar" value="Enviar">
+        </from><br>
+
+       <footer>
+            <div>
+                <p>Todos los derechos reservados</p>
+                <p>Copyright 2022</p>
+            </div>
+        </footer>
+    </body>
+</html>
