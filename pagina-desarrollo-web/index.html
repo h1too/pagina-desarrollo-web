@@ -1,85 +1,77 @@
+<!--Iniciamos html 5 con DOCTYPE-->
 <!DOCTYPE html>
 
+<!--Ponemos el teclado en español-->
 <html lang="es">
+    <!--Creamos la etiqueta HEAD para almacenar datos de la pagina-->
     <head>
-        <title>Autochile</title>
+        <!--Le ponemos un titulo a nuestra pagina y diversas descripciones-->
+        <title>RodaStore</title>
         <meta charset="UTF-8" />
-        <meta name="description" content="Esta es mi primera pagina" />
-        <meta name="viewport" content="width = device-width,initial-scale=1.0" />
-        <meta name="report" content="index, follow" />
-        <link type="text/css" href="style.css" rel="stylesheet">
+        <meta name="description" content="Esta es mi primera pagina"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="robots" content="index, follow"/>
+        <link type="text/css" href="CSS/style.css" rel="stylesheet">
+        <link rel="icon" href="./Imagenes/logo.png">
     </head>
-
+    <!--Creamos la etiquta body, para insertar y crear todo tipo de opciones ya sea funciones, imagenes, h1, etc-->
     <body>
-        <script>
-            //alert("El Dani tiene la mea tula🥵👉👈")
-
-            function CambiaTamano(){
-            document.getElementById("01").width=100
-            document.getElementById("01").height=100
-            }
-
-            function MuestraDatos(){
-                var mensaje="Los datos fueron enviados";
-                    mensaje = mensaje+
-                        //alert(document.getElementById("nom").value)
-                alert(mensaje);
-            }
-
-            function CambiaImagen(objeto){
-                objeto.src="JavaS.png";
-            }
-
-            function VolverImagen(objeto){
-                objeto.src="JavaS.png";
-            }
-        </script>
-
-        <header>
+        <!--Creamos header, esto se utiliza para navegar por los apartados de las paginas-->
+        <header class="header">
             <nav>
                 <ul class="ul_nav">
-                    <li>Inicio</li>
-                    <li>Productos y servicios</li>
-                    <li>Quienes somos</li>
-                    <li>Contacto</li>
+                    <li><a href="./index.html">Inicio / Home</a></li>
+                    <li><a href="./productos.html">Productos y servicios</a></li>
+                    <li><a href="./quienes_somos.html">Quienes somos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
 
-        <h1>Tienda de vehiculos</h1>
+        <h1>Tienda de Hardware y Software</h1>
 
-        <img id="01" src="./Imagenes/chileautos_WebVersion.png" width="500px" height="200px">
+        <img id="banner" src="./Imagenes/rodastore.png" alt="RodaStore">
+        
+        <p>Bienvenido/a a RodaStore, donde encontraras mucha variedad de componentes y mucho mas con facilidad, somos Roda.S.A, cualquier duda o comentario
+            te invitamos a entrar a nuestros apartado de contacto, en donde nuestros operadores estaran encantados de ayudarte, esperamos con ansias
+            que disfrutes la pagina.
+        </p><br>
 
-        <form action="#" onsubmit="MuestraDatos(this)">
-
-            Nombre: <input type="text" name="nom" id="nom" placeholder="Ingrese su nombre">
-            Correo: <input type="email" name="email" id="email" placeholder="Ingrese su correo">
-            Region: <select name="Region" id="Region">
-                <option value="0">--Seleccione un Pais--</option>
-                <option value="01">Arica-Parinacota</option>
-                <option value="02">Tarapacá</option>
-                <option value="03">Antofagasta</option>
-                <option value="04">Atacama</option>
-                <option value="05">Coquimbo</option>
-                <option value="06">Valparaíso</option>
-                <option value="07">Metropolitana</option>
-                <option value="08">O'Higgins</option>
-                <option value="09">Maule</option>
-                <option value="10">Ñuble</option>
-                <option value="11">Bío Bío</option>
-                <option value="12">Araucanía</option>
-                <option value="13">Los Ríos</option>
-                <option value="14">Los Lagos</option>
-                <option value="15">Aysén</option>
-                <option value="16">Magallanes y Antártica Chilena</option>
-                </select><br>
-            <input type="submit" name="Enviar" value="Enviar">
-        </from><br>
-
-       <footer>
-            <div>
-                <p>Todos los derechos reservados</p>
-                <p>Copyright 2022</p>
+        <h2>Registrate e inicia Sesion</h2><br>
+        <div id="botones_reg">
+            <a type="submit" class="register" href="./registro.php">Registrarse</a><br>
+            <a type="submit" class="login" href="./login.php">Iniciar Sesion</a>
+        </div>
+        <div class="container">
+            <div class="w-100 contenedor-list">
+                <ul>
+                    <li>Necesitas</li>
+                    <li>Actualizar</li>
+                    <li>Piezas?</li>
+                    <li>Utiliza</li>
+                    <li>Nuestra</li>
+                    <li>Pagina</li>
+                    <li>Donde</li>
+                    <li>Encontraras</li>
+                    <li>Software</li>
+                    <li>Hardware</li>
+                    <li>Y mucho mas</li>
+                    <li>Te esperamos!</li>
+                </ul>
+            </div>        
+        </div>
+        <!--Se agrega JavaScript para manipular la pagina-->
+        <script src="./JS/animation.js"></script>
+        <script src="./JS/scripts.js"></script>
+        <br>
+        
+        <!--Creamos el footer, este ira al final de la pagina con informacion sobre la empresa-->
+        <footer>
+            <div id="Copy">
+                <ul id="esp">
+                    <li>Todos los derechos reservados Roda.S.A</li>
+                    <li>Copyright © 2022</li>
+                </ul>
             </div>
         </footer>
     </body>
