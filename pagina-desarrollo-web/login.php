@@ -21,9 +21,10 @@
             <label class="label">Contraseña</label>
           </div>
           <a type="submit" class="init">Iniciar Sesion</a>
-          <a href="./registro.php">Crear una nueva cuenta</a><br>
-          <a href="#">¿Olvidaste tu contraseña?</a>
-          
+            <div class="tes">
+              <a href="./registro.php">Crear una nueva cuenta</a>
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
         </form>
     </div>
     <?php
