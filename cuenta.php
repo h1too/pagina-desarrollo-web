@@ -24,8 +24,8 @@
                 <div class="col-md-3">
                     <h1>datos de usuario</h1>
                         <?php
-                            echo "Bienvenido al sistema Sr. ".$_SESSION['nom']. "<br><br>";
-                            echo "Su correo es ".$_SESSION['mail']."<br><br>";
+                            echo "Bienvenido al sistema Sr. ".$_SESSION['usuario']. "<br><br>";
+                            echo "Su correo es ".$_SESSION['correo']."<br><br>";
                         ?>
                 </div>
                 <div class="col-md-8">
@@ -50,7 +50,7 @@
                                     <th><?php echo $row['usuario']?></th>
                                     <th><?php echo $row['correo']?></th>
                                     <th><?php echo $row['contraseña']?></th>
-                                    <th><a href="editar.php?id=<?php echo $row['id']?>" class="btn btn-info">Editar</a></th>
+                                    <th><a href="actualiza.php?id=<?php echo $row['id']?>" class="btn btn-info">Editar</a></th>
                                     <th><a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">Eliminar</a></th>
                                 </tr>
                             <?php
