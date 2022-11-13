@@ -1,7 +1,7 @@
 <?php 
     include("conex.php");
 
-    $id=$_GET['id'];
+    $id = $_GET['id'];
 
     $sql="SELECT * FROM usuarios WHERE id='$id'";
     $query=mysqli_query($bd,$sql);

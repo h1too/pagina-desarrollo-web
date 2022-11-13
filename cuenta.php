@@ -24,15 +24,15 @@
                 <div class="col-md-3">
                     <h1>datos de usuario</h1>
                         <?php
-                            echo "Bienvenido al sistema Sr. ".$_SESSION["nom"]. "<br><br>";
-                            echo "Su correo es ".$_SESSION["mail"]."<br><br>";
+                            echo "Bienvenido al sistema Sr. ".$_SESSION["usuario"]. "<br><br>";
+                            echo "Su correo es ".$_SESSION["correo"]."<br><br>";
                         ?>
                 </div>
                 <div class="col-md-8">
                     <table class="table">
                         <thead class="table-sucess table-striped">
                             <tr>
-                                <th>Id Usuario</th>
+                                <th>Id</th>
                                 <th>Usuario</th>
                                 <th>Email</th>
                                 <th>Contraseña</th>
