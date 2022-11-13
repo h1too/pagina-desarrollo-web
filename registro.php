@@ -11,7 +11,7 @@
 
     <body>
         <div class="signup">
-            <form action="./NewUser.php" class="formulario" method="post">
+            <form action="./NewUser.php" class="formulario" method="POST">
               <h1 class="titulo">Registrarse</h1>
 
               <div class="input_Contenedor">

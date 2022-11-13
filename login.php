@@ -9,7 +9,7 @@
   <body>
     <!-- DIV Contenedor del form -->
     <div class="login">
-        <form method="post" action="valida.php" class="formulario">
+        <form method="POST" action="valida.php" class="formulario">
           <h1 class="titulo">Iniciar Sesion</h1>
           <div class="input_Contenedor">
             <input type="text" name="user" class="input" placeholder="">

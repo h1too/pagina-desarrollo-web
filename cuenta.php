@@ -1,12 +1,13 @@
 <?php
+    session_start();
+
     include("conex.php");
 
-    $sql = "SELECT * FROM usuarios";
+    $sql = "CALL MuestraDatos";
     $query = mysqli_query($bd,$sql);
 
     $row = mysqli_fetch_array($query);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +23,16 @@
             <div class="row">
                 <div class="col-md-3">
                     <h1>datos de usuario</h1>
+                        <?php
+                            echo "Bienvenido al sistema Sr. ".$_SESSION['nom']. "<br><br>";
+                            echo "Su correo es ".$_SESSION['mail']."<br><br>";
+                        ?>
                 </div>
-
                 <div class="col-md-8">
                     <table class="table">
                         <thead class="table-sucess table-striped">
                             <tr>
+                                <th>Id Usuario</th>
                                 <th>Usuario</th>
                                 <th>Email</th>
                                 <th>Contraseña</th>
@@ -38,17 +43,16 @@
 
                         <tbody>
                             <?php
-                                while($row = mysqli_fetch_array($query)){
+                                while($row = mysqli_fetch_array($query)) {
                             ?>
-                            <tr>
-                                <th><?php echo $row['usuario']?></th>
-                                <th><?php echo $row['correo']?></th>
-                                <th><?php echo $row['contraseña']?></th>
-                                <!--crear id como claves primarias en la base de datos para los usuarios
-                                    para que asi me los muestro a todos y no solo a-->
-                                <th><a href="editar.php?id=<?php echo $row['usuario'] ?>" class="btn btn-info">Editar</a></th>
-                                <th><a href="delete.php?id=<?php echo $row['usuario'] ?>" class="btn btn-danger">Eliminar</a></th>
-                            </tr>
+                                <tr>
+                                    <th><?php echo $row['id']?></th>
+                                    <th><?php echo $row['usuario']?></th>
+                                    <th><?php echo $row['correo']?></th>
+                                    <th><?php echo $row['contraseña']?></th>
+                                    <th><a href="editar.php?id=<?php echo $row['id']?>" class="btn btn-info">Editar</a></th>
+                                    <th><a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">Eliminar</a></th>
+                                </tr>
                             <?php
                                 }
                             ?>
