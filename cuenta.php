@@ -24,8 +24,8 @@
                 <div class="col-md-3">
                     <h1>datos de usuario</h1>
                         <?php
-                            echo "Bienvenido al sistema Sr. ".$_SESSION['usuario']. "<br><br>";
-                            echo "Su correo es ".$_SESSION['correo']."<br><br>";
+                            echo "Bienvenido al sistema Sr. ".$_SESSION["nom"]. "<br><br>";
+                            echo "Su correo es ".$_SESSION["mail"]."<br><br>";
                         ?>
                 </div>
                 <div class="col-md-8">
