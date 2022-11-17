@@ -7,7 +7,7 @@
     <link rel="icon" href="./Imagenes/logo.png">
   </head>
   <body>
-    <!-- DIV Contenedor del form -->
+    <!-- DIV Contenedor del form -->|||
     <div class="login">
         <form method="POST" action="valida.php" class="formulario">
           <h1 class="titulo">Iniciar Sesion</h1>

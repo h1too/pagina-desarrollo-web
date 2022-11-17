@@ -1,9 +1,9 @@
 <?php
 
-    $host  = "db.inf.uct.cl";
-    $user = "A2022_rgutierrez";
-    $pass = "A2022_rgutierrez";
-    $base = "A2022_rgutierrez";
+    $host  ="localhost";
+    $user = "root";
+    $pass = "";
+    $base = "rodastore";
 
     $bd = mysqli_connect($host,$user,$pass,$base);
 
