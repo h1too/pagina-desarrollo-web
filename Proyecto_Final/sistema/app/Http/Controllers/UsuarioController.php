@@ -15,7 +15,8 @@ class UsuarioController extends Controller
     public function index()
     {
         //
-        return view('usuario.index');
+        $datos['usuarios']=Usuario::paginate(5); 
+        return view('usuario.cuenta',$datos);
     }
 
     /**
@@ -38,6 +39,10 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         //
+        //$datosUsuario = request()->all();
+        $datosUsuario = $request->except('_token');
+        Usuario::insert($datosUsuario);
+            return response()->json($datosUsuario);
     }
 
     /**
@@ -80,8 +85,10 @@ class UsuarioController extends Controller
      * @param  \App\Models\usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(usuario $usuario)
+    public function destroy($id)
     {
         //
+        usuario::destroy($id);
+            return redirect('usuario');
     }
 }
