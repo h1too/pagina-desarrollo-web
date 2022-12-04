@@ -15,8 +15,8 @@ class UsuarioController extends Controller
     public function index()
     {
         //
-        $datos['usuarios']=Usuario::paginate(5); 
-            return view('usuario.usuario',$datos);
+        $datos['usuarios']=usuario::paginate(5); 
+            return view('usuario.cuenta',$datos);
     }
 
     /**
