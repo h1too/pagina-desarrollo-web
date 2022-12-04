@@ -1,3 +1,6 @@
+
+<a href="{{ url('/usuario/create') }}">Registrar nuevo usuario</a>
+
 <table class="table table-ligth">
 
     <thead class="thead-ligth">

@@ -16,7 +16,7 @@ class UsuarioController extends Controller
     {
         //
         $datos['usuarios']=Usuario::paginate(5); 
-        return view('usuario.cuenta',$datos);
+            return view('usuario.usuario',$datos);
     }
 
     /**
@@ -62,9 +62,11 @@ class UsuarioController extends Controller
      * @param  \App\Models\usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function edit(usuario $usuario)
+    public function edit($id)
     {
         //
+        $usuario = usuario::findOrFail($id);
+            return view('usuario.edit', compact('usuario'));
     }
 
     /**
@@ -74,9 +76,15 @@ class UsuarioController extends Controller
      * @param  \App\Models\usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, usuario $usuario)
+    public function update(Request $request, $id)
     {
         //
+        $datosUsuario = $request->except(['_token','_method']);
+
+        usuario::where('id','=','$id')->update($datosUsuario);
+
+        $usuario = usuario::findOrFail($id);
+            return view('usuario.edit', compact('usuario'));
     }
 
     /**

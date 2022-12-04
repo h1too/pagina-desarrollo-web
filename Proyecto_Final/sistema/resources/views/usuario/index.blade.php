@@ -52,9 +52,9 @@
             </div>
             <div class="col-6 w-50 text-center align-self-center">
                 <div class="btn-group btn-success col-8 text-white boton-nav shadow-sm">
-                    <a href="./index.html" class="btn">Inicio / Home</a>
+                    <a href="{{ url('/usuario/index') }}" class="btn">Inicio / Home</a>
                     <a href="./contacto.html" class="btn">Contacto</a>
-                    <a href="./PHP/registro.php" class="btn">Registrarse</a>
+                    <a href="{{ url('/usuario/create') }}" class="btn">Registrarse</a>
                     <a href="./PHP/login.php" class="btn">Iniciar Sesion</a>
                 </div>
             </div>
